@@ -1,0 +1,36 @@
+body{
+    background: white;
+}
+
+.todo-list{
+    width: 50%;
+    background: white;
+    margin: auto;
+    color: black
+}
+
+.todo-box{
+    width: 100%;
+    background: #dfdfdf;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px 0
+}
+
+.todo-list .todo-title{
+    text-align: center;
+    margin: 0
+}
+.todo-list .todo-content ul{
+    padding: 0
+    
+}
+.todo-list .todo-content ul li{
+    list-style: none;
+    height: 20px
+}
+
+
+/* table, th, td{
+    border: 1px blue solid
+} */

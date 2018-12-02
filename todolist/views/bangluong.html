@@ -1,0 +1,36 @@
+<section class='container'>
+    <div ng-init='lang="us" '>
+        <select ng-model='lang'>
+            <option value="us">us</option>
+            <option value="vn">vn</option>
+        </select>
+        <table class='table'>
+            <tr>
+                <th>Tên</th>
+                <th>Ngày Sinh
+                    <br>
+                    (dd/mm/yyyy)
+                </th>
+                <th>Lương</th>
+                <th>Giới tính</th>
+            </tr>
+            <tr ng-repeat='emp in employees | limitTo:10 | orderBy:"salary" ' >
+                <td>{{emp.name | uppercase}}</td>
+                <td>{{emp.dob | date:"dd/MM/yyyy" }}</td>
+                <td>{{emp.salary | number: ''}}</td>
+                <td>{{emp.gender | gender: lang}}</td>
+            </tr>
+        </table>
+        <form ng-submit='addNewEmp()'>
+            <input type="text" placeholder="name" ng-model='newEmp.name'>
+            <input type="date" placeholder="day of birth" ng-model='newEmp.dob'>
+            <input type="number" placeholder="income" ng-model='newEmp.salary'>
+            <select name="" id="" ng-model='newEmp.gender'>
+                <option value="m">male</option>
+                <option value="f">female</option>
+                <option value="o">other</option>
+            </select>
+            <input type="submit" value="add">
+        </form>
+    </div>
+</section>

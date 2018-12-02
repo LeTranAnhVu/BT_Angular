@@ -1,0 +1,20 @@
+<section ng-controller='LangVoting'>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Likes</th>
+            <th>Dislikes</th>
+        </tr>
+        <tr ng-repeat='lang in languages'>
+            <td>{{lang.name}}</td>
+            <td>{{lang.likes}}</td>
+            <td>{{lang.dislikes}}</td>
+            <td>
+                <button ng-click='upLike($index)'>like</button>
+            </td>
+            <td>
+                <button ng-click='upDislike($index)'>dislike</button>
+            </td>
+        </tr>
+    </table>
+</section>

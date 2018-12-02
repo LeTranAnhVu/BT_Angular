@@ -1,0 +1,15 @@
+<section ng-controller='ToDoList' class="todo-list">
+    <h1 class='todo-title todo-box'>{{title}}</h1>
+    <div class='todo-content todo-box'>
+        <ul>
+            <li ng-repeat="stuff in list track by $index">{{stuff}}</li>
+        </ul>
+    </div>
+    <div class="todo-input todo-box">
+        <input type="text" ng-model='newStuff' placeholder="add stuff">
+        <button ng-click="addStuff()">Add</button>
+    </div>
+    <div>
+        <phone-list></phone-list>
+    </div>
+</section>
