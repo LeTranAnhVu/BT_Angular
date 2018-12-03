@@ -10,7 +10,6 @@ export class MessagesComponent implements OnInit {
   constructor(private messageService: MessagesService) {}
   messages: string[];
   getMessage(): void {
-    // this.messages = ['hello', 'warning', 'be ware'];
     this.messages = this.messageService.sendMessage();
     console.log('here', this.messages);
   }

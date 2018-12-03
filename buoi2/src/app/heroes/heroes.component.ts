@@ -8,9 +8,11 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
   constructor(private heroService: HeroService) {
+    this.newMsg = this.heroService.sendThankLetter();
   }
   heroes: Hero[];
   selectedHero: Hero;
+  newMsg: string;
 
   ngOnInit() {
     this.getHeroes();

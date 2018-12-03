@@ -6,11 +6,12 @@ import { HEROES  } from './mock-heroes';
 import { MessagesService } from './messages.service';
 import { Observable, of } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class HeroService {
-  constructor(private messageService: MessagesService) { }
+  constructor(private messageService: MessagesService) {
+    this.shareMsg = 'thank you for use our hero service';
+   }
+  shareMsg: string;
   getHeroes(): Observable<Hero[]> {
         // send the fetched message
         this.sendMessage('data is fetched successfully rrrr!');
@@ -18,5 +19,11 @@ export class HeroService {
   }
   sendMessage(message: string) {
     this.messageService.getMessage(message);
+  }
+  sendThankLetter() {
+    return this.shareMsg;
+  }
+  getFeedback(fb: string) {
+   this.shareMsg = fb;
   }
 }
