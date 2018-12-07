@@ -1,15 +1,13 @@
 .messages{
-  background: #ecf0f1;
   width: 40%;
-  border-radius: 30px;
-  overflow: hidden;
 }
 
 .message {
-  background: #3498db ;
-  color: white;
+  border: 1px  #3498db solid ;
+  color: #3498db;
   margin: 0;
-  border-bottom: #2ecc71 1px solid;
+  border-radius: 5px;
   font-size: 1.5rem;
-  padding: 10px 30px
+  padding: 10px 30px;
+  display: inline-block;
 }

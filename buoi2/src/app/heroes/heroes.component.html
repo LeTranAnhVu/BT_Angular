@@ -1,13 +1,13 @@
 <div [class.hero-table]="true">
   <div>
     <ul>
-      <li *ngFor="let hero of heroes" (click)="onSelected(hero)"  [class.hero-box]="selectedHero === hero" >
-        {{hero.id}} - {{hero.name}}
+      <li *ngFor="let hero of heroes">
+        <a routerLink="/heroes/{{hero.id}}">{{hero.id}} - {{hero.name}}</a>
       </li>
     </ul>
   </div>
   <div>
     <p><strong>{{newMsg}}</strong></p>
   </div>
-  <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+  <!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
 </div>

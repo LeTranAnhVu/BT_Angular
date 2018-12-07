@@ -11,7 +11,6 @@ export class HeroesComponent implements OnInit {
     this.newMsg = this.heroService.sendThankLetter();
   }
   heroes: Hero[];
-  selectedHero: Hero;
   newMsg: string;
 
   ngOnInit() {
@@ -23,9 +22,4 @@ export class HeroesComponent implements OnInit {
 
   }
 
-  // isSelected = false;
-  onSelected(hero: Hero) {
-    this.selectedHero = hero;
-    // this.isSelected = true;
-  }
 }
